@@ -1,6 +1,6 @@
 {
   "name": "Apollo Cloud",
-  "tagline": "A frontend for youtube-dl",
-  "body": "# Apollo Cloud\r\nApollo Cloud is a frotend webapp for youtube-dl, Built off of [Craicerjack's apache-flask docker image](https://hub.docker.com/r/craicerjack/apache-flask/).\r\n\r\n\r\n",
+  "tagline": " A Python powered MP3 downloader ",
+  "body": "# Apollo Cloud\r\n\r\n\r\n\r\nApollo Cloud is a Python powered MP3 downloader, built off of [Craicerjack's apache-flask docker image] (https://hub.docker.com/r/craicerjack/apache-flask/), and [youtube-dl](https://rg3.github.io/youtube-dl/).\r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
