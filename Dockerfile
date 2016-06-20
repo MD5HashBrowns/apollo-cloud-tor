@@ -4,7 +4,7 @@
 ############################################################
 
 # Set the base image
-FROM sdhibit/rpi-raspbian:latest
+FROM debian:latest
 
 # File Author / Maintainer
 MAINTAINER Carlos Tighe
