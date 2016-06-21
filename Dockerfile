@@ -40,6 +40,10 @@ COPY ./app /var/www/apache-flask/app/
 RUN a2dissite 000-default.conf
 RUN a2ensite apache-flask.conf
 
+
+# Set permissions for static dir
+RUN chmod -R 777 /var/www/apache-flask/app/static/  
+
 EXPOSE 80
 
 WORKDIR /var/www/apache-flask
