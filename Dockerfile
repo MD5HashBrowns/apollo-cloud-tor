@@ -6,8 +6,8 @@
 # Set the base image
 FROM debian:latest
 
-# File Author / Maintainer
-MAINTAINER Carlos Tighe
+# Original author is Carlos Tighe
+MAINTAINER MD5HashBrowns
 
 #Install packages
 RUN apt-get update && apt-get install -y apache2 \
