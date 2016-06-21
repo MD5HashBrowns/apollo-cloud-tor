@@ -9,7 +9,7 @@ FROM debian:latest
 # Original author is Carlos Tighe
 MAINTAINER MD5HashBrowns
 
-#Install packages
+# Install packages
 RUN apt-get update && apt-get install -y apache2 \
     libapache2-mod-wsgi \
     build-essential \
