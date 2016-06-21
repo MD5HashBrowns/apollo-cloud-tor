@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MD5HashBrowns/apollo-cloud/master/app/static/logo.png" width="350"/>
+  <img src="https://raw.githubusercontent.com/MD5HashBrowns/apollo-cloud/master/app/static/logo.png" width="450"/>
 </p>
 
 ### What is Apollo Cloud?
