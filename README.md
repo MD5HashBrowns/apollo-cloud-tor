@@ -6,4 +6,4 @@ A Python Flask powered MP3 downloader webapp, built off of [Craicerjack's apache
 
 ## Run Apollo Cloud
 To run Apollo Cloud, use the following command:
-```docker run -p 80:80 --name <name> md5hashbrowns/apollo-cloud```
+```docker run --name <name> md5hashbrowns/apollo-cloud```
