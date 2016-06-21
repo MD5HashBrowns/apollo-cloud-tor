@@ -10,7 +10,9 @@ FROM debian:latest
 MAINTAINER Carlos Tighe
 
 #Install packages
-RUN apt-get update && apt-get install -y apache2 \
+RUN apt-get update
+ && apt-get clean \
+ && apt-get install -y apache2 \
     libapache2-mod-wsgi \
     build-essential \
     python \
