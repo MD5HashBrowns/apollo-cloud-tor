@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y apache2 \
     python-dev\
     python-pip \
     vim \
+    libav-tools \
  && apt-get clean \
  && apt-get autoremove \
  && rm -rf /var/lib/apt/lists/*
