@@ -6,7 +6,12 @@
  <div style=" width: 70%; margin: 0 auto;">
         <form method="POST" action="/downloading/">
 	  <div id="formsubmitbutton"> 
-          <input id="_1" name="my-form" type="submit" class="btn btn-info" value="Download" style="float: right;">
+          	<input id="_1" name="my-form" type="submit" class="btn btn-info" value="Download" style="float: right;">
+          	<!-- Hidden untill submit button click -->
+          	<div>
+          		<img class="img-responsive" style="margin: auto; width:50px; padding-top: 20px;" src="{{ url_for('static', filename='loader.gif') }}" alt="loading">
+        	</div>
+        	<!-- / -->
 	  </div>
           <div style="overflow: hidden; padding-right: .5em;">
           <input name="url" style="width: 100%;" type="text" class="form-control" placeholder="Enter a song name...">          
@@ -17,10 +22,6 @@
 </div> <!-- Container close -->
 
 
-<div id="buttonreplacement" style="align:center; width:50%;margin: auto;  display:none;">
-<img class="img-responsive" style="margin: auto; width:50px; padding-top: 20px;" src="{{ url_for('static', filename='loader.gif') }}" alt="loading">
-<h3 style="color: #00b8e6; text-align: center;">Preparing to download your song</h3>
-</div>
 
 
 {% endblock %}
