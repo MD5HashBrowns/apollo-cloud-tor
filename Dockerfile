@@ -42,7 +42,7 @@ RUN a2dissite 000-default.conf
 RUN a2ensite apache-flask.conf
 
 
-# Set permissions for static dir
+# Set permissions for the static directory
 RUN chmod -R 777 /var/www/apache-flask/app/static/  
 
 EXPOSE 80
