@@ -28,7 +28,6 @@ RUN pip install -r /var/www/apache-flask/app/requirements.txt
 
 # Copy over the apache configuration file and enable the site
 COPY ./apache-flask.conf /etc/apache2/sites-available/apache-flask.conf
-COPY ./apache2.conf /etc/apache2/apache2.conf
 RUN a2ensite apache-flask
 RUN a2enmod headers
 
