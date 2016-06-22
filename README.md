@@ -1,5 +1,9 @@
 ![Apollo Cloud Logo](https://raw.githubusercontent.com/MD5HashBrowns/apollo-cloud/master/logo.png)
 
+
+### What is Apollo Cloud Tor?
+Apollo Cloud Tor is a version of Apollo Cloud without javascript and is optimized to be used with Tor.
+
 ### What is Apollo Cloud?
 Apollo Cloud is a Python Flask powered MP3 downloader webapp, built off of [Craicerjack's apache-flask docker image] (https://hub.docker.com/r/craicerjack/apache-flask/), and [youtube-dl](https://rg3.github.io/youtube-dl/).
 
