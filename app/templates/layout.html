@@ -13,6 +13,33 @@
 
 <style>
 
+#contentBox {
+width:80px;
+height:90px;
+float:left;
+background-color:#0F9;
+padding:10px;
+}
+.imagediv {
+width:80px;
+height:20px;
+margin:0px 0px 10px 0px; padding:0px;
+cursor:pointer;
+background-color:#39C;
+}
+#contentBox .hidediv {
+left:0px;
+display:none;
+z-index:100;
+width:80px;
+height:50px;
+margin:0px;
+background-color:#336;
+float:left;
+}
+#contentBox:hover .hidediv {
+display:block; top:0px; left:8px;
+}
 
 .center {
      float: none;
