@@ -1,20 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container">
- <img src="{{ url_for('static', filename='logo.png') }}"  class="img-responsive" alt="Loading..." style="margin: auto; width: 70%;  padding: 2%;"> 
+ <img src="{{ url_for('static', filename='logo.png') }}"  class="img-responsive" alt="Loading..." style="margin: auto; width: 70%;  padding: 2%;">
 
  <div style=" width: 70%; margin: 0 auto;">
         <form method="POST" action="/downloading/">
-	  <div id="formsubmitbutton"> 
-          	<input id="_1" name="my-form" type="submit" class="btn btn-info" value="Download" style="float: right;">
-          	<!-- Hidden untill submit button click -->
-          	<div>
-          		<img class="img-responsive" style="margin: auto; width:50px; padding-top: 20px;" src="{{ url_for('static', filename='loader.gif') }}" alt="loading">
-        	</div>
-        	<!-- / -->
-	  </div>
+	<div id="formsubmitbutton">
+		<input name="my-form" type="submit" class="btn btn-info" value="Download" style="float: right;">
+	</div>
           <div style="overflow: hidden; padding-right: .5em;">
-          <input name="url" style="width: 100%;" type="text" class="form-control" placeholder="Enter a song name...">          
+          <input name="url" style="width: 100%;" type="text" class="form-control" placeholder="Enter a song name...">
 </div>
         </form>
   </div>
