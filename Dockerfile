@@ -1,5 +1,5 @@
 ############################################################
-# Dockerfile to build Apollo Cloud
+# Dockerfile to build Apollo Cloud Tor
 ############################################################
 
 # Set the base image
