@@ -1,5 +1,5 @@
 ############################################################
-# Dockerfile to build Apollo Cloud Tor
+# Dockerfile to build Apollo Cloud
 ############################################################
 
 # Set the base image
@@ -15,37 +15,37 @@ RUN apt-get update && apt-get install -y apache2 \
     python \
     python-dev\
     python-pip \
-    vim \
+    nano \
     libav-tools \
  && apt-get clean \
  && apt-get autoremove \
  && rm -rf /var/lib/apt/lists/*
 
 # Copy over and install the requirements
-COPY ./app/requirements.txt /var/www/apache-flask/app/requirements.txt
-RUN pip install -r /var/www/apache-flask/app/requirements.txt
+COPY ./app/requirements.txt /var/www/apollo-cloud/app/requirements.txt
+RUN pip install -r /var/www/apollo-cloud/app/requirements.txt
 
 # Copy over the apache configuration file and enable the site
-COPY ./apache-flask.conf /etc/apache2/sites-available/apache-flask.conf
-RUN a2ensite apache-flask
+COPY ./apollo-cloud.conf /etc/apache2/sites-available/apollo-cloud.conf
+RUN a2ensite apollo-cloud
 RUN a2enmod headers
 
 # Copy over the wsgi file
-COPY ./apache-flask.wsgi /var/www/apache-flask/apache-flask.wsgi
+COPY ./apollo-cloud.wsgi /var/www/apollo-cloud/apollo-cloud.wsgi
 
-COPY ./run.py /var/www/apache-flask/run.py
-COPY ./app /var/www/apache-flask/app/
+COPY ./run.py /var/www/apollo-cloud/run.py
+COPY ./app /var/www/apollo-cloud/app/
 
 RUN a2dissite 000-default.conf
-RUN a2ensite apache-flask.conf
+RUN a2ensite apollo-cloud.conf
 
 
 # Set permissions for the static directory
-RUN chmod -R 777 /var/www/apache-flask/app/static/  
+RUN chmod -R 777 /var/www/apollo-cloud/app/static/  
 
 EXPOSE 80
 
-WORKDIR /var/www/apache-flask
+WORKDIR /var/www/apollo-cloud
 
 # CMD ["/bin/bash"]
 CMD  /usr/sbin/apache2ctl -D FOREGROUND
