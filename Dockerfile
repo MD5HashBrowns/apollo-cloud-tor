@@ -1,6 +1,5 @@
 ############################################################
-# Dockerfile to build Flask App
-# Based on
+# Dockerfile to build Apollo Cloud
 ############################################################
 
 # Set the base image
