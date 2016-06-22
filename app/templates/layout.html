@@ -52,8 +52,8 @@
     
     
     
-<!-- NavBar Start-->    
-    
+<!-- NavBar Start-->
+
     <nav class="navbar navbar-inverse navbar-static-top">
   <div class="container">
     <input type="checkbox" id="navbar-toggle-cbox">
@@ -71,11 +71,16 @@
         <li><a href="{{ url_for('index') }}">Home</a></li>
         <li><a href="{{ url_for('about') }}">About</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://hub.docker.com/r/md5hashbrowns/apollo-cloud/"><img class="img-responsive" alt="Placeholder image" src="{{ url_for('static', filename='docker.png') }}" style="height:25px;"></a></li>
+</ul>
+
+
     </div>
   </div>
 </nav>
-    
-<!-- NavBar End--> 
+
+<!-- NavBar End-->
 
 
 
