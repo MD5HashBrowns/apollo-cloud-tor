@@ -26,8 +26,7 @@ RUN pip install -r /var/www/apollo-cloud/app/requirements.txt
 
 # Copy over the apache configuration file and enable the site
 COPY ./apollo-cloud.conf /etc/apache2/sites-available/apollo-cloud.conf
-RUN a2ensite apollo-cloud
-RUN a2enmod headers
+RUN echo Include ../sites-enabled >> /etc/apache2/httpd.conf
 
 # Copy over the wsgi file
 COPY ./apollo-cloud.wsgi /var/www/apollo-cloud/apollo-cloud.wsgi
@@ -35,8 +34,6 @@ COPY ./apollo-cloud.wsgi /var/www/apollo-cloud/apollo-cloud.wsgi
 COPY ./run.py /var/www/apollo-cloud/run.py
 COPY ./app /var/www/apollo-cloud/app/
 
-RUN a2dissite 000-default.conf
-RUN a2ensite apollo-cloud.conf
 
 
 # Set permissions for the static directory
