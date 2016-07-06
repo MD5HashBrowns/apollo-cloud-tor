@@ -18,6 +18,7 @@ RUN apk add --update \
     py-pip \
     nano \
     ffmpeg \
+    && rm -rf /var/cache/apk/*
 
 # Copy over and install the requirements
 COPY ./app/requirements.txt /var/www/apollo-cloud/app/requirements.txt
