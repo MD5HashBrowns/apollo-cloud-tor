@@ -3,23 +3,21 @@
 ############################################################
 
 # Set the base image
-FROM debian:latest
+FROM alpine:latest
 
 # Original author is Carlos Tighe
 MAINTAINER MD5HashBrowns
 
 # Install packages
-RUN apt-get update && apt-get install -y apache2 \
-    libapache2-mod-wsgi \
-    build-essential \
+RUN apk add --update \
+    apache2 \
+    apache2-mod-wsgi \
+    alpine-sdk \
     python \
-    python-dev\
-    python-pip \
+    python-dev \
+    py-pip \
     nano \
-    libav-tools \
- && apt-get clean \
- && apt-get autoremove \
- && rm -rf /var/lib/apt/lists/*
+    ffmpeg \
 
 # Copy over and install the requirements
 COPY ./app/requirements.txt /var/www/apollo-cloud/app/requirements.txt
