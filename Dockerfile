@@ -25,7 +25,8 @@ COPY ./app/requirements.txt /var/www/apollo-cloud/app/requirements.txt
 RUN pip install -r /var/www/apollo-cloud/app/requirements.txt
 
 # Copy over the apache configuration file and enable the site
-COPY ./apollo-cloud.conf /etc/apache2/sites-available/apollo-cloud.conf
+RUN mkdir /var/sites-enabled
+COPY ./apollo-cloud.conf /var/sites-available/apollo-cloud.conf
 RUN echo Include ../sites-enabled >> /etc/apache2/httpd.conf
 
 # Copy over the wsgi file
